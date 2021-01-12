@@ -133,8 +133,11 @@
     var maxAllowed = Math.max(clarinet.MAX_BUFFER_LENGTH, 10)
       , maxActual = 0
       ;
+      console.log('maxAllowed', maxAllowed);
     for (var buffer in buffers) {
       var len = parser[buffer] === undefined ? 0 : parser[buffer].length;
+      console.log('len', len);
+
       if (len > maxAllowed) {
         switch (buffer) {
           case "text":
